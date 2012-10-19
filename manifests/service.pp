@@ -13,5 +13,6 @@ class statsd::service {
     start    => '/sbin/start statsd',
     stop     => '/sbin/stop statsd',
     status   => '/sbin/status statsd',
+    require  => File['/etc/init/statsd.conf']
   }
 }
