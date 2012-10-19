@@ -12,7 +12,7 @@ class statsd::service {
     provider => 'base',
     start    => '/sbin/start statsd',
     stop     => '/sbin/stop statsd',
-    status   => '/sbin/status statsd',
+    status   => '/sbin/status statsd | /bin/grep running',
     require  => File['/etc/init/statsd.conf']
   }
 }
